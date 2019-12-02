@@ -113,7 +113,6 @@ class Stop(models.Model):
     class Meta:
         managed = True
         db_table = 'Stop'
-        unique_together = (('stpid', 'trnid', 'cmtid'),)
 
 
 class Street(models.Model):
