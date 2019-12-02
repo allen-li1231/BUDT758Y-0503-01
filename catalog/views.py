@@ -54,7 +54,8 @@ def property_candidate_generator(candidate, search_form):
 
     if apt_location:
         filter_apt_location = Q(cmtid_id__cmtname__icontains=apt_location) | \
-                              Q(cmtid_id__sttid_id__sttname__icontains=apt_location)
+                              Q(cmtid_id__sttid_id__sttname__icontains=apt_location) | \
+                              Q(cmtid_id__sttid_id__ctyid_id__ctyname__icontains=apt_location)
     else:
         filter_apt_location = Q()
 

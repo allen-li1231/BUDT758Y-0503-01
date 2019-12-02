@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<meta http-equiv="X-UA-Compatible" content="IE=11" >
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 {% load static %}
 {% load price_parser %}
 {% load string_replace %}
@@ -41,7 +41,7 @@
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
-	          <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+	          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
 	          <li class="nav-item"><a href="properties.html?page=1" class="nav-link">Listing</a></li>
 	          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
 	          <li class="nav-item"><a href="agent.html" class="nav-link">Agent</a></li>
@@ -340,12 +340,12 @@
           return;
         }
         else {
-          document.getElementById('map_distance').innerHTML += directionsData.distance.text + " (" + directionsData.duration.text + ").";
+          document.getElementById('map_distance').innerHTML += directionsData.distance.text + " (" + directionsData.duration.text + ")";
         }
       }
     });
   }</script>
-   <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOURAPIKEY&callback=initMap&language=en"></script>
+   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWcVMiC60LYN7u_9yCm6YV28FsGPgvKAE&callback=initMap&language=en"></script>
   <script src="{% static "js/main.js" %}"></script>
     
   </body>
