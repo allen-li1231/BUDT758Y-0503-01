@@ -1,0 +1,391 @@
+﻿<!DOCTYPE html>
+<meta http-equiv="X-UA-Compatible" content="IE=11" >
+{% load static %}
+{% load price_parser %}
+<html lang="en">
+  <head>
+    <title>Consulting ONE INC.</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static "css/open-iconic-bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static "css/animate.css" %}">
+    
+    <link rel="stylesheet" href="{% static "css/owl.carousel.min.css" %}">
+    <link rel="stylesheet" href="{% static "css/owl.theme.default.min.css" %}">
+    <link rel="stylesheet" href="{% static "css/magnific-popup.css" %}">
+
+    <link rel="stylesheet" href="{% static "css/aos.css" %}">
+
+    <link rel="stylesheet" href="{% static "css/ionicons.min.css" %}">
+
+    <link rel="stylesheet" href="{% static "css/bootstrap-datepicker.css" %}">
+    <link rel="stylesheet" href="{% static "css/jquery.timepicker.css" %}">
+
+    
+    <link rel="stylesheet" href="{% static "css/flaticon.css" %}">
+    <link rel="stylesheet" href="{% static "css/icomoon.css" %}">
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+  </head>
+  <body>
+    
+	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container">
+
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+	          <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+	          <li class="nav-item"><a href="properties.html?page=1" class="nav-link">Listing</a></li>
+	          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+	          <li class="nav-item"><a href="agent.html" class="nav-link">Agent</a></li>
+	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+    <!-- END nav -->
+    
+    <div class="hero-wrap" style="background-image: url('{% static "images/bg_2.jpg" %}');" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="overlay-2"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text justify-content-center align-items-center">
+          <div class="col-lg-8 col-md-6 ftco-animate d-flex align-items-end">
+          	<div class="text text-center w-100">
+	            <h1 class="mb-4">Find Apartments <br>Around UMD</h1>
+	            <p><a href="properties.html?page=1" class="btn btn-primary py-3 px-4">All Apartments</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mouse">
+				<a href="#" class="mouse-icon">
+					<div class="mouse-wheel"><span class="ion-ios-arrow-round-down"></span></div>
+				</a>
+			</div>
+    </div>
+
+
+    <section class="ftco-section ftco-no-pb">
+    	<div class="container">
+	    	<div class="row">
+					<div class="col-md-12">
+						<div class="search-wrap-1 ftco-animate">
+							<form name="search_form" action="/properties.html?page=1" class="search-property-1" method="get">
+		        		<div class="row">
+		        			<div class="col-lg align-items-end">
+		        				<div class="form-group">
+		        					<label for="#">Location</label>
+		          				<div class="form-field">
+		          					<div class="icon"><span class="ion-ios-search"></span></div>
+				                <input type="text" name="apt-location" class="form-control" placeholder="City/Community Name" maxlength="100">
+				              </div>
+			              </div>
+		        			</div>
+		        			<div class="col-lg align-items-end">
+		        				<div class="form-group">
+		        					<label for="#">Apartment Type</label>
+		        					<div class="form-field">
+		          					<div class="select-wrap">
+		                      <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+		                      <select name="option-apt-type" id="" class="form-control">
+		                      	<option value="all">Type</option>
+		                        <option value="Townhouse">Townhouse</option>
+		                        <option value="Miscellaneous">Miscellaneous</option>
+                                <option value="SingleFamily">Single Family</option>
+		                        <option value="MultiFamily2To4">MultiFamily 2 To 4</option>
+		                        <option value="MultiFamily5Plus">MultiFamily 5 Plus</option>
+		                        <option value="Condominium">Condominium</option>
+		                        <option value="Apartment">Apartment</option>
+		                      </select>
+		                    </div>
+				              </div>
+			              </div>
+		        			</div>
+		        			<div class="col-lg align-items-end">
+		        				<div class="form-group">
+		        					<label for="#">Bedroom</label>
+		        					<div class="form-field">
+		          					<div class="select-wrap">
+		                      <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+		                      <select name="option-apt-bedroom" id="" class="form-control">
+		                      	<option value="all">Type</option>
+		                        <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+		                      </select>
+		                    </div>
+				              </div>
+			              </div>
+		        			</div>
+                            <div class="col-lg align-items-end">
+		        				<div class="form-group">
+		        					<label for="#">Bathroom</label>
+		        					<div class="form-field">
+		          					<div class="select-wrap">
+		                      <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+		                      <select name="option-apt-bathroom" id="" class="form-control">
+		                      	<option value="all">Type</option>
+		                        <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+		                      </select>
+		                    </div>
+				              </div>
+			              </div>
+		        			</div>
+		        			<div class="col-lg align-items-end">
+		        				<div class="form-group">
+		        					<label for="#">Price Limit</label>
+		        					<div class="form-field">
+		          					<div class="select-wrap">
+		                      <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+		                      <select name="option-apt-price" id="" class="form-control">
+								<option value="all">Price</option>
+		                        <option value="0-500">&lt $500</option>
+		                        <option value="500-1000">$500~$1,000</option>
+		                        <option value="1000-1500">$1,000~$1,500</option>
+		                        <option value="1500-2000">$1,500~$2,000</option>
+		                        <option value="2000-2500">$2,000~$2,500</option>
+		                        <option value="2500-3000">$2,500~$3,000</option>
+		                        <option value="3000-10000">&gt $3,000</option>
+		                      </select>
+		                    </div>
+				              </div>
+			              </div>
+		        			</div>
+		        			<div class="col-lg align-self-end">
+		        				<div class="form-group">
+		        					<div class="form-field">
+				                <input type="submit" value="Search Apartments" class="form-control btn btn-primary">
+				              </div>
+			              </div>
+		        			</div>
+		        		</div>
+		        	</form>
+		        </div>
+					</div>
+	    	</div>
+	    </div>
+    </section>
+
+    <section class="ftco-section goto-here">
+    	<div class="container">
+    		<div class="row justify-content-center">
+          <div class="col-md-12 heading-section text-center ftco-animate mb-5">
+          	<span class="subheading">What we offer</span>
+            <h2 class="mb-2">Exclusive Offer For You</h2>
+          </div>
+        </div>
+        <div class="row">
+        	<div class="col-md-4">
+        		<div class="property-wrap ftco-animate">
+        			<div class="img d-flex align-items-center justify-content-center" style="background-image: url({% static "images/work-1.jpg" %});">
+        				<a href="properties-single.html" class="icon d-flex align-items-center justify-content-center btn-custom">
+        					<span class="ion-ios-link"></span>
+        				</a>
+        			</div>
+        			<div class="text">
+        				<p class="price mb-3"><span class="orig-price">${{ properties_rand_1.rsdprice|price_parser }}<small>/mo</small></span></p>
+        				<h3 class="mb-0"><a href="properties-single.html?rsdid={{ properties_rand_1.rsdid }}">{{ properties_rand_1.cmtid.cmtname }}</a></h3>
+        				<span class="location d-inline-block mb-3"><i class="ion-ios-pin mr-2"></i>{{ properties_rand_1.cmtid.sttid.sttname }}, {{ properties_rand_1.cmtid.sttid.ctyid.ctyname }}</span>
+        				<ul class="property_list">
+        					<li><span class="flaticon-bed"></span>{{properties_rand_1.rsdbedroom}}</li>
+        					<li><span class="flaticon-bathtub"></span>{{properties_rand_1.rsdbathroom}}</li>
+        					<li><span class="flaticon-floor-plan"></span>{{properties_rand_1.rsdsqft|price_parser}} sqft</li>
+        				</ul>
+        			</div>
+        		</div>
+        	</div>
+        	<div class="col-md-4">
+        		<div class="property-wrap ftco-animate">
+        			<div class="img d-flex align-items-center justify-content-center" style="background-image: url({% static "images/work-2.jpg" %});">
+        				<a href="properties-single.html" class="icon d-flex align-items-center justify-content-center btn-custom">
+        					<span class="ion-ios-link"></span>
+        				</a>
+        			</div>
+        			<div class="text">
+        				<p class="price mb-3"><span class="orig-price">${{ properties_rand_2.rsdprice|price_parser }}<small>/mo</small></span></p>
+        				<h3 class="mb-0"><a href="properties-single.html?rsdid={{ properties_rand_2.rsdid }}">{{ properties_rand_2.cmtid.cmtname }}</a></h3>
+        				<span class="location d-inline-block mb-3"><i class="ion-ios-pin mr-2"></i>{{ properties_rand_2.cmtid.sttid.sttname }}, {{ properties_rand_2.cmtid.sttid.ctyid.ctyname }}</span>
+        				<ul class="property_list">
+        					<li><span class="flaticon-bed"></span>{{properties_rand_2.rsdbedroom}}</li>
+        					<li><span class="flaticon-bathtub"></span>{{properties_rand_2.rsdbathroom}}</li>
+        					<li><span class="flaticon-floor-plan"></span>{{properties_rand_2.rsdsqft|price_parser}} sqft</li>
+        				</ul>
+        			</div>
+        		</div>
+        	</div>
+        	<div class="col-md-4">
+        		<div class="property-wrap ftco-animate">
+        			<div class="img d-flex align-items-center justify-content-center" style="background-image: url({% static "images/work-3.jpg" %});">
+        				<a href="properties-single.html?rsdid={{ properties_rand_1.rsdid }}" class="icon d-flex align-items-center justify-content-center btn-custom">
+        					<span class="ion-ios-link"></span>
+        				</a>
+        			</div>
+        			<div class="text">
+        				<p class="price mb-3"><span class="orig-price">${{ properties_rand_3.rsdprice|price_parser }}<small>/mo</small></span></p>
+        				<h3 class="mb-0"><a href="properties-single.html?rsdid={{ properties_rand_3.rsdid }}">{{ properties_rand_3.cmtid.cmtname }}</a></h3>
+        				<span class="location d-inline-block mb-3"><i class="ion-ios-pin mr-2"></i>{{ properties_rand_3.cmtid.sttid.sttname }}, {{ properties_rand_3.cmtid.sttid.ctyid.ctyname }}</span>
+        				<ul class="property_list">
+        					<li><span class="flaticon-bed"></span>{{properties_rand_3.rsdbedroom}}</li>
+        					<li><span class="flaticon-bathtub"></span>{{properties_rand_3.rsdbathroom}}</li>
+        					<li><span class="flaticon-floor-plan"></span>{{properties_rand_3.rsdsqft|price_parser}} sqft</li>
+        				</ul>
+        			</div>
+        		</div>
+        	</div>
+
+        	<div class="col-md-4">
+        		<div class="property-wrap ftco-animate">
+        			<div class="img d-flex align-items-center justify-content-center" style="background-image: url({% static "images/work-4.jpg" %});">
+        				<a href="properties-single.html?rsdid={{ properties_rand_4.rsdid }}" class="icon d-flex align-items-center justify-content-center btn-custom">
+        					<span class="ion-ios-link"></span>
+        				</a>
+        			</div>
+        			<div class="text">
+        				<p class="price mb-3"><span class="orig-price">${{ properties_rand_4.rsdprice|price_parser }}<small>/mo</small></span></p>
+        				<h3 class="mb-0"><a href="properties-single.html?rsdid={{ properties_rand_4.rsdid }}">{{ properties_rand_4.cmtid.cmtname }}</a></h3>
+        				<span class="location d-inline-block mb-3"><i class="ion-ios-pin mr-2"></i>{{ properties_rand_4.cmtid.sttid.sttname }}, {{ properties_rand_4.cmtid.sttid.ctyid.ctyname }}</span>
+        				<ul class="property_list">
+        					<li><span class="flaticon-bed"></span>{{properties_rand_4.rsdbedroom}}</li>
+        					<li><span class="flaticon-bathtub"></span>{{properties_rand_4.rsdbathroom}}</li>
+        					<li><span class="flaticon-floor-plan"></span>{{properties_rand_4.rsdsqft|price_parser}} sqft</li>
+        				</ul>
+        			</div>
+        		</div>
+        	</div>
+        	<div class="col-md-4">
+        		<div class="property-wrap ftco-animate">
+        			<div class="img d-flex align-items-center justify-content-center" style="background-image: url({% static "images/work-5.jpg" %});">
+        				<a href="properties-single.html?rsdid={{ properties_rand_5.rsdid }}" class="icon d-flex align-items-center justify-content-center btn-custom">
+        					<span class="ion-ios-link"></span>
+        				</a>
+        			</div>
+        			<div class="text">
+        				<p class="price mb-3"><span class="orig-price">${{ properties_rand_5.rsdprice|price_parser }}<small>/mo</small></span></p>
+        				<h3 class="mb-0"><a href="properties-single.html?rsdid={{ properties_rand_5.rsdid }}">{{ properties_rand_5.cmtid.cmtname }}</a></h3>
+        				<span class="location d-inline-block mb-3"><i class="ion-ios-pin mr-2"></i>{{ properties_rand_5.cmtid.sttid.sttname }}, {{ properties_rand_5.cmtid.sttid.ctyid.ctyname }}</span>
+        				<ul class="property_list">
+        					<li><span class="flaticon-bed"></span>{{properties_rand_5.rsdbedroom}}</li>
+        					<li><span class="flaticon-bathtub"></span>{{properties_rand_5.rsdbathroom}}</li>
+        					<li><span class="flaticon-floor-plan"></span>{{properties_rand_5.rsdsqft|price_parser}} sqft</li>
+        				</ul>
+        			</div>
+        		</div>
+        	</div>
+        	<div class="col-md-4">
+        		<div class="property-wrap ftco-animate">
+        			<div class="img d-flex align-items-center justify-content-center" style="background-image: url({% static "images/work-6.jpg" %});">
+        				<a href="properties-single.html?rsdid={{ properties_rand_6.rsdid }}" class="icon d-flex align-items-center justify-content-center btn-custom">
+        					<span class="ion-ios-link"></span>
+        				</a>
+        			</div>
+        			<div class="text">
+        				<p class="price mb-3"><span class="orig-price">${{ properties_rand_6.rsdprice|price_parser }}<small>/mo</small></span></p>
+        				<h3 class="mb-0"><a href="properties-single.html?rsdid={{ properties_rand_6.rsdid }}">{{ properties_rand_6.cmtid.cmtname }}</a></h3>
+        				<span class="location d-inline-block mb-3"><i class="ion-ios-pin mr-2"></i>{{ properties_rand_6.cmtid.sttid.sttname }}, {{ properties_rand_6.cmtid.sttid.ctyid.ctyname }}</span>
+        				<ul class="property_list">
+        					<li><span class="flaticon-bed"></span>{{properties_rand_6.rsdbedroom}}</li>
+        					<li><span class="flaticon-bathtub"></span>{{properties_rand_6.rsdbathroom}}</li>
+        					<li><span class="flaticon-floor-plan"></span>{{properties_rand_6.rsdsqft|price_parser}} sqft</li>
+        				</ul>
+        			</div>
+        		</div>
+        	</div>
+        </div>
+    	</div>
+    </section>
+
+    <footer class="ftco-footer ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Consulting ONE</h2>
+              <p>Data and professions, make the success</p>
+              <ul class="ftco-footer-social list-unstyled mt-5">
+                <li class="ftco-animate"><a href="https://github.com/allen-li1231/BUDT758Y-0503-01"><span class="icon-github"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-4">
+              <h2 class="ftco-heading-2">Community</h2>
+              <ul class="list-unstyled">
+                <li><a href="index.html"><span class="icon-long-arrow-right mr-2"></span>Search Apartments</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Reviews</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-4">
+              <h2 class="ftco-heading-2">About Us</h2>
+              <ul class="list-unstyled">
+                <li><a href="agent.html"><span class="icon-long-arrow-right mr-2"></span>Meet the team</a></li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+            	<h2 class="ftco-heading-2">Have a Questions?</h2>
+            	<div class="block-23 mb-3">
+	              <ul>
+					<li><span class="icon icon-map-marker"></span><span class="text">Van Munching Hall, College Park, MD, USA</span></li>
+	                <li><a href="tel://+240 825 8796"><span class="icon icon-phone"></span><span class="text">+240 825 8796</span></a></li>
+	                <li><a href="mailto:zhonghao.li@rhsmith.umd.edu"><span class="icon icon-envelope pr-4"></span><span class="text">zhonghao.li@rhsmith.umd.edu</span></a></li>
+	              </ul>
+	            </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+	
+            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> Consulting ONE INC. All rights reserved<a href="https://colorlib.com" target="_blank">Colorlib</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="{% static "js/jquery.min.js" %}"></script>
+  <script src="{% static "js/jquery-migrate-3.0.1.min.js" %}"></script>
+  <script src="{% static "js/popper.min.js" %}"></script>
+  <script src="{% static "js/bootstrap.min.js" %}"></script>
+  <script src="{% static "js/jquery.easing.1.3.js" %}"></script>
+  <script src="{% static "js/jquery.waypoints.min.js" %}"></script>
+  <script src="{% static "js/jquery.stellar.min.js" %}"></script>
+  <script src="{% static "js/owl.carousel.min.js" %}"></script>
+  <script src="{% static "js/jquery.magnific-popup.min.js" %}"></script>
+  <script src="{% static "js/aos.js" %}"></script>
+  <script src="{% static "js/jquery.animateNumber.min.js" %}"></script>
+  <script src="{% static "js/bootstrap-datepicker.js" %}"></script>
+  <script src="{% static "js/jquery.timepicker.min.js" %}"></script>
+  <script src="{% static "js/scrollax.min.js" %}"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+  <script src="{% static "js/google-map.js" %}"></script>
+  <script src="{% static "js/main.js" %}"></script>
+    
+  </body>
+</html>
