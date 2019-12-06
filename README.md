@@ -7,12 +7,13 @@ Contain:
 Library:
 + django, pyodbc, django-pyodbc-azure, numpy
 
-> Note: In order this server to run properly, you will also need to configure database password please consult  [zhonghao.li@rhsmith.umd.edu](mailto:zhonghao.li@rhsmith.umd.edu)
+> :warning: Note: In order this server to run properly, you will also need to configure database password please consult  [zhonghao.li@rhsmith.umd.edu](mailto:zhonghao.li@rhsmith.umd.edu)
 
 
 ### Installing and running 
 1. git clone to your local driver
-2. launch server that visibles only on your computer
+2. launch server that can be accessed only on your computer
 ``` shell
-cd ./BUDT758Y-0503-01 && python manage.py runserver
+cd ./BUDT758Y-0503-01 && python manage.py runserver 127.0.0.1:8000
 ```
+3. open browser and access http://127.0.0.1:8000
