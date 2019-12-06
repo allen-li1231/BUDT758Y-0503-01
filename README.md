@@ -8,7 +8,7 @@ Library:
 + django, pyodbc, django-pyodbc-azure, numpy
 
 
-### Installing and running 
+### Installing and running
 > :warning: Note: In order this server to run properly, you will also need VPN to access UMD local network, a google API key to enable map Javascript service and configure database password in BUDT758Y-0503-01/locallibrary/settings.py. Please consult  [zhonghao.li@rhsmith.umd.edu](mailto:zhonghao.li@rhsmith.umd.edu) for more information.
 
 1. git clone to your local driver
@@ -19,8 +19,14 @@ In Linux:
 cd ./BUDT758Y-0503-01 && python manage.py runserver 127.0.0.1:8000
 ```
 In powershell:
-``` powershell
+``` shell
 cd ./BUDT758Y-0503-01 ; python manage.py runserver 127.0.0.1:8000
 ```
-
 4. open browser and get access to http://127.0.0.1:8000
+
+### File tree
+BUDT758Y-0503-01
+> catalog
+> > migrations
+> > templates   # contains html templates for django to render
+> > templatetags    # contains parse tools for html templates
