@@ -14,37 +14,23 @@ Library:
 1. git clone to your local driver
 2. configure database keyword, google API key
 3. launch server that can be accessed only on your computer
-In Linux:
+on Linux:
 ``` shell
 cd ./BUDT758Y-0503-01 && python manage.py runserver 127.0.0.1:8000
 ```
-In powershell:
+Or in powershell:
 ``` shell
 cd ./BUDT758Y-0503-01 ; python manage.py runserver 127.0.0.1:8000
 ```
 4. open browser and get access to http://127.0.0.1:8000
 
 ### File tree
-BUDT758Y-0503-01
-> catalog
-> > migrations
-> > templates   # contains html templates for django to render
-> > templatetags    # contains parse tools for html templates
-
-+-- _config.yml
-+-- _drafts
-|   +-- begin-with-the-crazy-ideas.textile
-|   +-- on-simplicity-in-technology.markdown
-+-- _includes
-|   +-- footer.html
-|   +-- header.html
-+-- _layouts
-|   +-- default.html
-|   +-- post.html
-+-- _posts
-|   +-- 2007-10-29-why-every-programmer-should-play-nethack.textile
-|   +-- 2009-04-26-barcamp-boston-4-roundup.textile
-+-- _data
-|   +-- members.yml
-+-- _site
-+-- index.html
+``` bash
+.
+├── catalog
+│   ├── migrations
+│   ├── templates   # contains html templates to be rendered by django engine. Also a directory for static file source
+│   └── templatetags    # contains parsing tools for html render
+├── locallibrary    # contains settings.py, global configuration for Django
+└── static    # static file directory
+```
