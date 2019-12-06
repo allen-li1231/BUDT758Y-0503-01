@@ -1,5 +1,5 @@
-# BUDT758Y-0503-01 Project Visualization section
-### This repo contains dynamic nice-looking website for BUDT758Y-0503-01 team project
+# BUDT758Y-0503-01 Project Visualization Section
+### This repo contains dynamic website for BUDT758Y-0503-01 team project
 ---
 Contain: 
 + Source code of frontend-backend project website.
@@ -14,7 +14,13 @@ Library:
 1. git clone to your local driver
 2. configure database keyword, google API key
 3. launch server that can be accessed only on your computer
+In Linux:
 ``` shell
 cd ./BUDT758Y-0503-01 && python manage.py runserver 127.0.0.1:8000
 ```
+In powershell:
+``` powershell
+cd ./BUDT758Y-0503-01 ; python manage.py runserver 127.0.0.1:8000
+```
+
 4. open browser and get access to http://127.0.0.1:8000
