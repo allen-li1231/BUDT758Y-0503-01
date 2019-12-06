@@ -27,7 +27,7 @@ cd ./BUDT758Y-0503-01 ; python manage.py runserver 127.0.0.1:8000
 ### File tree
 ``` bash
 .
-├── catalog
+├── catalog   # Django app directory
 │   ├── migrations
 │   ├── templates   # contains html templates to be rendered by django engine. Also a directory for static file source
 │   └── templatetags    # contains parsing tools for html render
