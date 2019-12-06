@@ -1,5 +1,5 @@
 # BUDT758Y-0503-01 Project Visualization Section
-#### Dynamic website for leasing apartment around UMD
+Dynamic website for leasing apartment around UMD
 ---
 Contain: 
 + Source code of frontend-backend project website.
